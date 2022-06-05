@@ -47,7 +47,7 @@ local flag_whitelist = {
 }
 
 hook.Add("PlayerSpray", "SprayPlus_DiscardInvalid", function(ply)
-	if not cvar_enabled:GetBool() then return end
+	if not cvar_enabled:GetBool() then return true end
 	if ply:GetSprayValidated() then return end
 	return true
 end)
